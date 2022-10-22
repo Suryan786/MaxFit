@@ -1,0 +1,10 @@
+<aura:component >
+    <!--Step 3: Calling the registered event-->
+    <aura:registerEvent name="cmpEvent" type="c:passValuesFromChildtoParentEvent"/>
+
+    <div style="background:yellow">
+        <lightning:button variant="brand" label="Stone" title="Brand action" onclick="{! c.handleClick }" />
+        <lightning:button variant="brand" label="Paper" title="Brand action" onclick="{! c.handleClick }" />
+        <lightning:button variant="brand" label="Scissor" title="Brand action" onclick="{! c.handleClick }" />
+    </div>
+</aura:component>

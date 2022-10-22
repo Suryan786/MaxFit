@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <!--Passing the child values in parent to display on the UI-->
+    <aura:attribute name="buttonNameParent" type="String"/>
+    
+    <!--Step 5: "aura:handle" used for catching the event coming from child.
+	handleComponentEvent: When the event is fired, the handleComponentEvent action in the client-side controller of the handler component is invoked.-->
+    <aura:handler name="cmpEvent" event="c:passValuesFromChildtoParentEvent" action="{!c.handleComponentEvent}"/>
+    
+    
+    <div class="slds-box">
+        <p>Here is the selected button: {!v.buttonNameParent}</p>
+    </div>
+    
+    <c:childComp/>
+</aura:component>

@@ -1,0 +1,5 @@
+({
+    myHelperMethod : function(component, event) {
+       
+    }
+})

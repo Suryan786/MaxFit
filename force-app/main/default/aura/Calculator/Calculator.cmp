@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="Result" type="String"/>
+    
+    <lightning:input aura:id="firstNumber" type="number" name="input1" label="Enter the first number" />
+    <lightning:input aura:id="secondNumber" type="number" name="input1" label="Enter the second number" />
+    
+    <br/>
+    <lightning:buttonGroup>
+        <lightning:button label="Addition" onclick="{!c.handleClick}"/>
+        <lightning:button label="Subtraction" onclick="{!c.handleClick}"/>
+        <lightning:button label="Multiplication" onclick="{!c.handleClick}"/>
+    </lightning:buttonGroup>
+    
+    <br/> <br/>
+    <div style="background: lightcoral;height: 100px;">
+        Result: {!v.Result}
+    </div>
+    
+</aura:component>

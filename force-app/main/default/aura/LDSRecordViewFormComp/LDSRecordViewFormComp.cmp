@@ -1,0 +1,12 @@
+<aura:component>
+    <lightning:recordViewForm recordId="0032x00000AVeYSAA1" objectApiName="Contact">
+        <div class="slds-box" style="border-radius:1.25rem;background-color:aquamarine;">
+            <lightning:outputField fieldName="Email" />
+            <lightning:outputField fieldName="LastName" />
+        </div>
+        
+        <div class="slds-box" style="border-radius:1.25rem;background-color:lightblue;">
+            <lightning:outputField fieldName="FirstName" />
+        </div>
+    </lightning:recordViewForm>
+</aura:component>

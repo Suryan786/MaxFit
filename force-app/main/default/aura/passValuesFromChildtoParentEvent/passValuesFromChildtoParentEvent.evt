@@ -1,0 +1,7 @@
+<!--Step 1: Calling Component event-->
+<aura:event type="APPLICATION" description="Event template">
+
+    <!--Step 2: Passing the child values-->
+    <aura:attribute name="buttonName" type="String"/>
+	
+</aura:event>

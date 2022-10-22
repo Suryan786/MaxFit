@@ -1,0 +1,17 @@
+<template>
+    <lightning-input type="number" name="input1" label="First number" onchange={handleChanges}></lightning-input>
+    <lightning-input type="number" name="input2" label="Last number" onchange={handleChanges}></lightning-input>
+
+    <lightning-button variant="brand" label="Addition" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand" label="Multiplication" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand" label="Division" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+    <lightning-card title="output">
+        The first number is {firstNumber} <br/>
+        The second number is {secondNumber}<br/>
+
+        The result is {result}<br/>
+
+    </lightning-card>
+
+</template>

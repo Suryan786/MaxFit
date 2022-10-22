@@ -1,0 +1,22 @@
+<aura:component controller="makingServerCallController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="accList" type="List"/>
+    <!--<div class="slds-align_absolute-center" style="height:5rem">
+        <lightning:button variant="success" label="Show Account" title="Success" onclick="{! c.handleClick }"/>
+    </div>--> 
+    
+    <aura:iteration items="{!v.accList}" var="item">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <span>{!item.Name}</span>
+            </div>
+            <div class="slds-col">
+                <span>{!item.Industry}</span>
+            </div>
+            <div class="slds-col">
+                <span>{!item.Id}</span>
+            </div>
+        </div>
+    </aura:iteration>
+</aura:component>

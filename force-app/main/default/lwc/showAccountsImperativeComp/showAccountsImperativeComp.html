@@ -1,0 +1,10 @@
+<template>
+    <lightning-button variant="brand" label="Show Accounts" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-card title="Account list to be displayed">
+        <template for:each={accountList} for:item="acc">
+            <li key={acc.Id}>
+                {acc.Name}, {acc.Id}
+            </li>
+        </template>
+    </lightning-card>
+</template>

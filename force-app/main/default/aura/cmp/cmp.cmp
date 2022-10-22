@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="totalButton" type="Integer"/>
+    <aura:attribute name="ColumnNumber" type="Integer"/>
+    <aura:attribute name="fieldsList" type="String[]" default="['Id', 'Name', 'BillingAddress', 'Phone', 'Type']"/>
+    <div class="THIS">
+        <lightning:recordForm
+                              recordId="{!v.recordId}"
+                              objectApiName="Account"
+                              fields="{!v.fieldsList}"
+                              columns="{!v.ColumnNumber}"
+                              mode="view"
+                              onsuccess="{!c.myAction}" />
+    </div>
+</aura:component>

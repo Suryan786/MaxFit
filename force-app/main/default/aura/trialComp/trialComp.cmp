@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="trialCompApexController">
+    
+    <aura:attribute name="fullName" type="String"/>
+    <aura:attribute name="email" type="String"/>
+    <aura:attribute name="phoneNumber" type="String"/>
+    <aura:attribute name="showOutputPanel" type="Boolean" default="false"/>
+    
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        <div class="slds-size_1-of-2">
+            <lightning:input aura:id="firstNameId" name="input3" label="First Name" placeholder="type here..."/>
+        </div>
+        <div class="slds-size_1-of-2">
+            <lightning:input aura:id="lastNameId" name="input4" label="Last Name" placeholder="type here..."/>
+        </div>
+    </div>
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        <div class="slds-size_1-of-2">
+            <lightning:input aura:id="emailId" type="email" name="email3" placeholder="youraddress@company.com" label="Email Address" />
+        </div>
+        <div class="slds-size_1-of-2">
+            <lightning:input aura:id="PhoneNumber" type="tel" label="Phone Number" name="phone2" placeholder="areacode-phone"/>
+        </div>
+    </div>
+    
+    <div class="slds-align_absolute-center" style="height:5rem">
+        <lightning:button variant="success" label="Create" title="Success" onclick="{! c.handleClick }"/>
+    </div> 
+    
+    <aura:if isTrue="{!v.showOutputPanel}"> <!--Boolean Condition-->
+        <lightning:card>
+            Here is your details: <br/>
+            Name: {!v.fullName} <br/>
+            Email: {!v.email} <br/>
+            Contact info: {!v.phoneNumber} <br/>
+        </lightning:card>
+        
+        <div class="slds-align_absolute-center" style="height:5rem">
+            <lightning:button variant="success" label="Hide" title="hide" onclick="{! c.hideAction }"/>
+        </div> 
+        
+    </aura:if>
+    
+</aura:component>

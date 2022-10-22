@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="totalButton"/>
+    <design:attribute name="ColumnNumber"/>
+</design:component>
